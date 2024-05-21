@@ -57,7 +57,7 @@ const replies = [
   ["Nothing much", "About to go to sleep", "Can you guess?", "I don't know actually"],
   ["I am infinite"],
   ["I am just a bot created by Abhay Sahgal", "I am a bot created by Abhay Sahgal. What are you?"],
-  ["The one true God, JavaScript"],
+  ["I am a bot created by Abhay Sahgal"],
   ["I am nameless", "I don't have a name"],
   ["I love you too", "Me too"],
   ["Have you ever felt bad?", "Glad to hear it"],
