@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.getElementById("input");
+  const sendButton = document.getElementById("send");
+
   inputField.addEventListener("keydown", (e) => {
     if (e.code === "Enter") {
-      let input = inputField.value;
+      handleInput();
+    }
+  });
+
+  sendButton.addEventListener("click", handleInput);
+
+  function handleInput() {
+    let input = inputField.value;
+    if (input.trim() !== "") {
       inputField.value = "";
       output(input);
     }
-  });
+  }
 });
 
 function output(input) {
@@ -26,11 +36,11 @@ function output(input) {
     .replace(/ please/g, "")
     .replace(/r u/g, "are you");
 
-  if (compare(prompts, replies, text)) { 
+  if (compare(prompts, replies, text)) {
     // Search for exact match in `prompts`
     product = compare(prompts, replies, text);
   } else if (text.match(/thank/gi)) {
-    product = "You're welcome!"
+    product = "You're welcome!";
   } else if (text.match(/(corona|covid|virus)/gi)) {
     // If no match, check if message contains `coronavirus`
     product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
@@ -57,7 +67,7 @@ function compare(promptsArray, repliesArray, string) {
       }
     }
     if (replyFound) {
-      // Stop outer loop when reply is found instead of interating through the entire array
+      // Stop outer loop when reply is found instead of iterating through the entire array
       break;
     }
   }
@@ -90,8 +100,6 @@ function addChat(input, product) {
   // Fake delay to seem "real"
   setTimeout(() => {
     botText.innerText = `${product}`;
-    textToSpeech(product)
-  }, 2000
-  )
-
+    textToSpeech(product);
+  }, 2000);
 }
