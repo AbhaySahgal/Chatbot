@@ -46,7 +46,8 @@ const prompts = [
   ["do you have a job", "what is your job"],
   ["can you sing", "do you sing", "sing a song"],
   ["what is your favorite food", "favorite food", "food you like"],
-  ["what is your favorite book", "favorite book", "book you like"]
+  ["what is your favorite book", "favorite book", "book you like"],
+  ["what can you do", "what is your power"]
 ]
 
 // Possible responses, in corresponding order
@@ -93,6 +94,7 @@ const replies = [
   ["I can't sing, but I can share lyrics", "I can hum a tune", "Let's sing together!"],
   ["Pizza", "Ice cream", "Chocolate"],
   ["1984 by George Orwell", "To Kill a Mockingbird", "Harry Potter"]
+  ["my power is give answers","Giving answers"],
 ]
 
 // Random for any other user input
